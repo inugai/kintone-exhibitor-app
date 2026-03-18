@@ -31,5 +31,5 @@ jobs:
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: dist/assets # ビルドされたファイルがある場所
+          folder: dist # ビルドされたファイルがある場所
           branch: gh-pages # gh-pagesブランチにデプロイ
