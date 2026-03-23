@@ -81,7 +81,7 @@ function App() {
       await client.record.addRecord({
         app: import.meta.env.VITE_APP_ID_BOOTH_LOG,
         record: {
-          出展者ID: { value: exhibitorId },
+          出展者ID: { value: String(exhibitorId).trim() },
           uuid: { value: decodedText },
           // 日時はISO形式でOK
           日時: { value: new Date().toISOString() } 
@@ -94,9 +94,10 @@ function App() {
       // 次のスキャンのためにリセット（またはそのまま待機）
       window.location.reload(); 
 
-    } catch (err) {
+    } catch (err: any) {
       console.error(err);
       setStatus("❌ 通信エラー");
+      console.log("Kintoneとの通信に失敗しました。SettingsのSecretsを確認してください。", err.results);
       alert("Kintoneとの通信に失敗しました。SettingsのSecretsを確認してください。");
     }
   };
