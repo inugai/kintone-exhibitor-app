@@ -23,6 +23,9 @@ function App() {
   const scannerRef = useRef<Html5QrcodeScanner | null>(null);
 
   useEffect(() => {
+    console.log("Base URL:", import.meta.env.VITE_KINTONE_BASE_URL);
+    console.log("API Token:", import.meta.env.VITE_KINTONE_API_PLAN_TOKEN) ;
+    
     const params = new URLSearchParams(window.location.search);
     const id = params.get('exh_id');
     if (id) {
@@ -80,7 +83,7 @@ function App() {
           出展者ID: { value: exhibitorId },
           uuid: { value: decodedText },
           // 日時はISO形式でOK
-          訪問日時: { value: new Date().toISOString() } 
+          日時: { value: new Date().toISOString() } 
         }
       });
 
