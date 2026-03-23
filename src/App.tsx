@@ -112,7 +112,7 @@ function App() {
 
     scanner.render(
       (text) => handleScan(text), // 第一引数：成功時
-      (err) => { /* 読み取り中のエラーは無視 */ } // 第二引数：失敗時
+      (_err) => { /* 読み取り中のエラーは無視 */ } // 第二引数：失敗時
     );
 
     scannerRef.current = scanner;
