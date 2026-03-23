@@ -8,7 +8,8 @@ const client = new KintoneRestAPIClient({
   auth: { 
     apiToken: [
       import.meta.env.VITE_KINTONE_API_TOKEN, 
-      import.meta.env.VITE_KINTONE_API_PLAN_TOKEN 
+      import.meta.env.VITE_KINTONE_API_PLAN_TOKEN, 
+      import.meta.env.VITE_KINTONE_API_EXHIBITIR_TOKEN
     ] 
   }
 });
@@ -25,7 +26,7 @@ function App() {
   useEffect(() => {
     console.log("Base URL:", import.meta.env.VITE_KINTONE_BASE_URL);
     console.log("API Token:", import.meta.env.VITE_KINTONE_API_PLAN_TOKEN) ;
-    
+
     const params = new URLSearchParams(window.location.search);
     const id = params.get('exh_id');
     if (id) {
