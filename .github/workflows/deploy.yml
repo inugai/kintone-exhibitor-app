@@ -28,6 +28,8 @@ jobs:
           VITE_KINTONE_API_EXH_TOKEN: ${{ secrets.VITE_KINTONE_API_EXH_TOKEN }}
           VITE_APP_ID_PLAN: ${{ secrets.VITE_APP_ID_PLAN }}
           VITE_APP_ID_BOOTH_LOG: ${{ secrets.VITE_APP_ID_BOOTH_LOG }}
+          VITE_APP_ID_EXHIBITOR: ${{ secrets.VITE_APP_ID_EXHIBITOR }}
+
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
