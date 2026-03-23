@@ -35,7 +35,7 @@ function App() {
       // 1. 来場者情報の照合
       const planResp = await client.record.getRecords({
         app: import.meta.env.VITE_APP_ID_PLAN,
-        query: `uuid_field = "${decodedText}" limit 1`
+        query: `uuid = "${decodedText}" limit 1`
       });
 
       if (planResp.records.length === 0) {
@@ -52,8 +52,8 @@ function App() {
         app: import.meta.env.VITE_APP_ID_BOOTH_LOG,
         record: {
           出展者ID: { value: exhibitorId },
-          UUID: { value: decodedText },
-          訪問日時: { value: new Date().toISOString() }
+          uuid: { value: decodedText },
+          日時: { value: new Date().toISOString() }
         }
       });
 
