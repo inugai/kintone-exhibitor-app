@@ -25,7 +25,7 @@ function App() {
 
   useEffect(() => {
     console.log("Base URL:", import.meta.env.VITE_KINTONE_BASE_URL);
-    console.log("API Token:", import.meta.env.VITE_KINTONE_API_PLAN_TOKEN) ;
+    console.log("API Token:", import.meta.env.VITE_KINTONE_API_EXIBITOR_TOKEN) ;
 
     const params = new URLSearchParams(window.location.search);
     const id = params.get('exh_id');
