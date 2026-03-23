@@ -9,7 +9,7 @@ const client = new KintoneRestAPIClient({
     apiToken: [
       import.meta.env.VITE_KINTONE_API_TOKEN, 
       import.meta.env.VITE_KINTONE_API_PLAN_TOKEN, 
-      import.meta.env.VITE_KINTONE_API_EXHIBITIR_TOKEN
+      import.meta.env.VITE_KINTONE_API_EXHIBITOR_TOKEN
     ] 
   }
 });
