@@ -23,7 +23,7 @@ const client = new KintoneRestAPIClient({
   auth: { 
     apiToken: [
       getEnv('VITE_KINTONE_API_TOKEN'),      
-      getEnv('VITE_KINTONE_API_LOG_TOKEN'),  
+      getEnv('VITE_KINTONE_API_PLAN_TOKEN'),  
       getEnv('VITE_KINTONE_API_EXH_TOKEN')   
     ]
   }
