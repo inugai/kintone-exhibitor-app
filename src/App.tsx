@@ -53,7 +53,7 @@ function App() {
         // 出展者リストアプリにIDが存在するかチェック
         const resp = await client.record.getRecords({
           app: getEnv('VITE_APP_ID_EXHIBITOR'),
-          query: `出展者ID = "${id}" limit 1`
+          query: `uuid = "${id}" limit 1`
         });
 
         if (resp.records.length > 0) {
