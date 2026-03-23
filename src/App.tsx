@@ -28,7 +28,7 @@ function App() {
     if (!exhibitorId) return;
     
     // 二重読み込み防止のため一度停止
-    await scanner.clear();
+    await scanner.stop();
     setStatus("照合中...");
 
     try {
