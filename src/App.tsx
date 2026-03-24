@@ -41,9 +41,9 @@ function App() {
 
   useEffect(() => {
 
-    console.log('VITE_APP_ID_EXHIBITOR', getEnv('VITE_APP_ID_EXHIBITOR'));
-    console.log('VITE_APP_ID_PLAN', getEnv('VITE_APP_ID_PLAN'));
-    console.log('VITE_APP_ID_BOOTH_LOG', getEnv('VITE_APP_ID_BOOTH_LOG'));
+   // console.log('VITE_APP_ID_EXHIBITOR', getEnv('VITE_APP_ID_EXHIBITOR'));
+   // console.log('VITE_APP_ID_PLAN', getEnv('VITE_APP_ID_PLAN'));
+   // console.log('VITE_APP_ID_BOOTH_LOG', getEnv('VITE_APP_ID_BOOTH_LOG'));
     
     const validateExhibitor = async () => {
       const params = new URLSearchParams(window.location.search);
