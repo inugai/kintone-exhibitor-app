@@ -33,7 +33,7 @@ function App() {
   const [status, setStatus] = useState('初期化中...');
   const [exhibitorId, setExhibitorId] = useState('');
   const [exhibitorName, setExhibitorName] = useState(''); 
-  const [visitorName, setVisitorName] = useState('');
+ // const [visitorName, setVisitorName] = useState('');
   const [isScanning, setIsScanning] = useState(false);
   const [isValidId, setIsValidId] = useState(false); 
   
@@ -112,7 +112,7 @@ function App() {
       }
 
       const name = planResp.records[0].氏名.value as string;
-      setVisitorName(name);
+     // setVisitorName(name);
 
       // 2. 訪問履歴登録
       await client.record.addRecord({
@@ -125,7 +125,7 @@ function App() {
       });
 
       setStatus("✅ 登録完了");
-      alert(`${visitorName} 様の訪問を記録しました`);
+      alert(`${name} 様の訪問を記録しました`);
       window.location.reload(); 
 
     } catch (err) {
